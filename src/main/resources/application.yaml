@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-tight-sun-a4th07wi-pooler.us-east-1.aws.neon.tech:5432/neondb?sslmode\=require
+    username: ${db_username}
+    password: ${db_password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # or validate, create, etc. as needed
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: false
+
+server:
+  port: 8081
